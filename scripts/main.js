@@ -1,6 +1,6 @@
-import { WalkerList } from "./WalkerList.js"
+import { WalkerList } from "./Walkers.js"
 import { CityList } from "./CityList.js"
-import { PetList } from "./PetList.js"
+import { PetList } from "./RegisteredPets.js"
 import { Assignments } from "./Assignments.js"
 
 const mainContainer = document.querySelector("#container")
