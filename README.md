@@ -10,4 +10,4 @@ We added our first Event Listener to a project, and used the debugger to step th
 
 Finally, we refractored the code to create a citt list, and replaced the name in the walker list with a foreign key from the city list.  Then we refractored the code in the walker event listener, the city list, and the assignments lists to identify the correct city using the foreign key.
 
-To view this code in Chrome, run the ```SERVE```command in the terminal and open the URL in Chrome.
+To view this code in Chrome, run the ```SERVE``` command in the terminal and open the URL in Chrome.
