@@ -1,3 +1,24 @@
+.title {
+    padding: 0;
+    margin: 0;
+}
+
+.title__container {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.title img {
+    height: 10em;
+    margin-right: 2rem;
+}
+
+.title h1 {
+    align-items: flex-end;
+    font-size: 4em;
+}
+
 .details {
     display: flex;
     justify-content: space-evenly;
