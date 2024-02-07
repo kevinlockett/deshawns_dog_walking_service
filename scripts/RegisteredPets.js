@@ -1,27 +1,22 @@
 import { getPets, getWalkers } from "./database.js"
 
 const pets = getPets()
-const walkers = getWalkers()
 
 document.addEventListener(
     "click",
     (clickEvent) => {
         const itemClicked = clickEvent.target
-        if (itemClicked.id.startsWith("pet")) {
-            const [,petId] = itemClicked.id.split("--")
 
-            for (const pet of pets) {
-                if (pet.id === parseInt(petId)) {
+        if (itemClicked.dataset.type === "registeredPets") {
 
-                    let assignedWalker = { name: "" }
+            const walkerId = itemClicked.dataset.walkerforeignkey
 
-                    for (const walker of walkers) {
-                        if (pet.walkerId === walker.id) {
-                            assignedWalker = walker
-                        }
+            const walkers = getWalkers()
+            for (const walker of walkers) {
+                if (walker.id === parseInt(walkerId)) {
+                
+                        window.alert(`${itemClicked.dataset.name} is being walked by ${walker.name}.`)
                     }
-                    window.alert(`${pet.name} is being walked by ${assignedWalker.name}`)
-                }
             }
         }
     }
@@ -31,7 +26,7 @@ export const PetList = () => {
     let petsHTML = "<ul>"
 
     for (const pet of pets) {
-        petsHTML += `<li id="pet--${pet.id}">${pet.name}</li>`
+        petsHTML += `<li data-name=${pet.name} data-walkerForeignKey="${pet.walkerId}" data-type="registeredPets" >${pet.name}</li>`
     }
 
     petsHTML += "</ul>"

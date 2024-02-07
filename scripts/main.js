@@ -9,7 +9,7 @@ const applicationHTML = `
 <div class="title">
     <section class="title__container">
         <img src="./img/dog.png" alt="DeShawn's beagle, Skip" />
-        <h1>DeShawns Dog Walking</h1>
+        <h1>DeShawn's Dog Walking Service</h1>
     </section>
 </div>
 <article class="details">
