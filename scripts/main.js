@@ -8,7 +8,7 @@ const mainContainer = document.querySelector("#container")
 const applicationHTML = `
 <div class="title">
     <section class="title__container">
-        <img src="./img/dog.png" alt="DeShawn's beagle, Skip" />
+        <img src="./img/dog.png" alt="DeShawn's beagle, Slappy" />
         <h1>DeShawn's Dog Walking Service</h1>
     </section>
 </div>
@@ -17,11 +17,11 @@ const applicationHTML = `
         <h2>Cities with Service</h2>
         ${CityList()}
     </section>
-    <section class="detail--column list details__cities">
+    <section class="detail--column list details__walkers">
         <h2>Walkers</h2>
         ${WalkerList()}
     </section>
-    <section class="detail--column list details__cities">
+    <section class="detail--column list details__pets">
         <h2>Pets</h2>
         ${PetList()}
     </section>
